@@ -1,0 +1,25 @@
+.questions{
+  grid-area: questions;
+  max-width: 24.125rem;
+
+  & > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+
+    & > li{
+      display: flex;
+      gap: .5rem;
+
+      & h3{
+        font: var(--p-md);
+        color: var(--content-brand);
+      }
+
+      & p{
+        font: var(--p-sm);
+        color: var(--content-secondary);
+      }
+    }
+  }
+}

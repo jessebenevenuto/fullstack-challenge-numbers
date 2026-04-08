@@ -1,0 +1,112 @@
+#form{
+  & > .fields-wrapper{
+    margin-block: 2.5rem;
+
+    & > .input-wrapper{
+      display: flex;
+      gap: .75rem;
+      margin-bottom: 1.25rem;
+
+      & > .input-group{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        &:has(:hover),
+        &:has(:focus-within){
+          & > label{
+            color: var(--content-brand);
+          }
+        }
+
+        & > label{
+          font: var(--label-sm);
+          text-transform: uppercase;
+          text-align: center;
+          color: var(--content-secondary);
+        }
+
+        & > .gradient-border{
+          padding: .0625rem;
+          border-radius: .5rem;
+          width: 5.375rem;
+          height: 3.5rem;
+
+          &:has(:hover){
+            background: linear-gradient(to right, var(--gradient-border));
+          }
+
+          &:has(:focus-within){
+            padding: .125rem;
+            background: linear-gradient(to right, var(--gradient-border));
+          }
+
+          & > input{
+            background-color: var(--background-secondary);
+            border: none;
+            border-radius: .5rem;
+            outline: none;
+            color: var(--content-primary);
+
+            font: var(--display-sm);
+            text-align: center;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    & > .switch-wrapper{
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+
+      width: fit-content;
+      cursor: pointer;
+
+      & > label{
+        font: 400 .75rem/1.5 "Inter", sans-serif;
+      }
+
+      & > input{
+        all: unset;
+        width: 1.875rem;
+        height: 1.25rem;
+
+        background: #818283;
+        border-radius: 1rem;
+        position: relative;
+
+        &::after{
+          content: "";
+          display: block;
+          width: .875rem;
+          height: .875rem;
+
+          background-color: var(--content-primary);
+          border-radius: 50%;
+
+          position: absolute;
+          top: 50%;
+          left: .1875rem;
+          transform: translateY(-50%);
+
+          transition: left .3s;
+        }
+
+        &:focus{
+          outline: .125rem solid var(--content-primary);
+        }
+
+        &:checked{
+          background: linear-gradient(to right, var(--gradient-background));
+        }
+
+        &:checked::after{
+          left: .8125rem;
+        }
+      }
+    }
+  }
+}

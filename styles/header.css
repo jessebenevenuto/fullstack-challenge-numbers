@@ -1,0 +1,29 @@
+.header{
+  grid-area: header;
+
+  & > span{
+    font: var(--overline);
+    text-transform: uppercase;
+    background: linear-gradient(var(--gradient-content));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  & > h1{
+    font: var(--display-md);
+    text-transform: uppercase;
+    margin-top: .5rem;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .header{
+    margin-bottom: 2.375rem;
+
+    & > h1{
+      font: var(--display-lg);
+      margin-top: .625rem;
+    }
+  }
+}
